@@ -1,0 +1,392 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-right: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+
+.hide-header {
+    display: none; /* hides the header when scroll down */
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #f6f4f4;
+    padding-left: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f7f7f7;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('cafe.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Blur BG */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    padding-top: 180px;
+    padding-left: 50px;
+}
+
+.hero .content h2 {
+    font-size: 80px;
+    font-family: 'Elephant';
+    line-height: 1.1;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+/* About DOOH section */
+.about-dooh {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: rgb(255, 255, 255); /* White background */
+    padding-top: 80px; /* To offset the header */
+}
+
+/* Left side content */
+.content-left {
+    text-align: center;
+    padding: 40px;
+}
+
+.content-left h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Elephant';
+}
+
+.content-left p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.image-scroll {
+    max-width: 100%;
+    max-height: 80vh; 
+    object-fit: cover;
+}
+
+
+/* Key Features  */
+.key-features {
+    padding: 50px;
+    background-color: white;
+    text-align: left;
+    
+}
+
+.key-features h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-family: 'Elephant';
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-item {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.feature-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive  */
+@media (max-width: 1024px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* 4th page */
+.features {
+    padding: 50px;
+    background-color: white;
+    text-align: left;
+    
+}
+
+.features h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-family: 'Elephant';
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Clients  */
+.clients {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.clients h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-family: Elephant;
+}
+
+.clients-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clients-container span {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .clients-container {
+        flex-direction: column;
+    }
+
+    .clients-container span {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* footer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo2 h1 {
+    font-size: 24px;
+    color: #000000;
+    padding-left: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+}
+
+footer {
+    background-color: #e3eaf2;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.contact-section h2 {
+    color: #000;
+    font-size: 24px;
+}
+
+.contact-btn {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    background-color: #f0f4f8;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.logo-address, .quick-links, .social-media {
+    margin: 10px;
+    text-align: left;
+    line-height: 2.5;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.quick-links ul {
+    list-style-type: none;
+}
+
+.quick-links ul li {
+    margin-bottom: 5px;
+}
+
+.quick-links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media a img {
+    width: 32px;
+    margin: 0 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+}

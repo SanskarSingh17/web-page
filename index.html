@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!DOCTYPE html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MyLogo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#key-features">Services</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#About Us">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Amplify Your Brand<br>with the power of<br>DOOH</h2>
+        </div>
+    </section>
+
+    <section class="about-dooh"></section>
+        <div class="content-left">
+            <h2>All ABOUT DOOH</h2>
+            <p>
+                Digital Out-of-Home (DOOH) advertising <br> is a dynamic form of <br> advertising
+                that reaches <br> consumers while they are on the go.
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Features  -->
+    <section id="key-features" class="key-features">
+        <h1>Key Features</h1>
+        <div class="features-container">
+            <!-- Feature 1 -->
+            <div class="feature-item">
+                <img src="image1.jpg" alt="Dynamic Content">
+                <h3>Dynamic Content</h3>
+                <p>DOOH allows real-time updates and tailored messaging, making it possible to display different ads based on time of day, weather, or current events.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature-item">
+                <img src="image2.png" alt="Targeted Reach">
+                <h3>Targeted Reach</h3>
+                <p>With advanced data analytics and location-based targeting, advertisers can reach specific demographics or audiences in high-traffic areas.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature-item">
+                <img src="image3.png" alt="High Visibility">
+                <h3>High Visibility</h3>
+                <p>DOOH screens are often located in busy public spaces, ensuring high visibility and exposure to a broad audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4th page -->
+    <section id="Blog" class="features">
+        <div class="container">
+            <!-- 4a -->
+            <div class="item">
+                <img src="image4.jpg" alt="Dynamic Content">
+                <h3>Engagement</h3>
+                <p> Interactive elements like touchscreens or QR
+                    codes can enhance consumer engagement,
+                    encouraging immediate interaction with the
+                    brand.</p>
+            </div>
+            <!-- 4b -->
+            <div class="item">
+                <img src="image5.jpg" alt="Targeted Reach">
+                <h3>Brand Recall</h3>
+                <p> The eye-catching nature of digital displays can
+                    lead to higher brand recall compared to
+                    traditional static ads.</p>
+            </div>
+            <!-- 4c -->
+            <div class="item">
+                <img src="image6.jpg" alt="High Visibility">
+                <h3> Increased Flexibility</h3>
+                <p> Campaigns can be easily adjusted or optimized
+                    on the go, allowing for quick responses to
+                    changing market conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients  -->
+    <section class="clients">
+        <h2>Clients</h2>
+        <div class="clients-container">
+            <span>Phases & Spaces Inc.</span>
+            <span>Memento</span>
+            <span>CrowdZero</span>
+            <span>CuraAid</span>
+        </div>
+    </section>
+
+    <footer>
+        <div id="About Us" class="contact-section">
+            <h2>Ready to elevate your brand with engaging content on DOOH?</h2>
+            <button class="contact-btn">Contact us</button>
+        </div>
+        <div class="footer-content">
+            <div class="logo-address">
+                <div class="logo2">
+                    <h1>My logo</h1>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i>Kansai section<br> Ambernath west, Thane 421505.</p>
+                <p><i class="fas fa-phone-alt"></i>Phone: +91-9114521445 / 022-4165465</p>
+                <p><i class="fas fa-envelope"></i>Email: <a href="mail@info.in">mail@info.in</a></p>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="#key-features">Services</a></li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#About Us">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="linkedin.png" alt="linkedin"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Get the header element
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+    
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            // Check if user is scrolling down
+            if (scrollTop > lastScrollTop) {
+                // Scroll down
+                header.classList.add('hide-header');
+            } else {
+                // Scroll up
+                header.classList.remove('hide-header');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+</body>
+</html>
